@@ -1,0 +1,22 @@
+{% load static %}
+
+<!doctype html>
+  <html ng-app>
+    <head>
+      <!-- core css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    </head>
+    <body>
+      <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {% verbatim %}{{yourName}}{% endverbatim %}!</h1>
+      </div>
+    <!-- core scripts -->
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- angular scripts -->
+		<script type="text/javascript" src="{% static 'js/angular.js' %}"></script>
+    </body>
+</html>
